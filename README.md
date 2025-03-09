@@ -4,7 +4,7 @@ Welcome to the **Data Warehouse and Analytics Project** repository! 🚀
 This project showcases a complete data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
 Inspired by: [SQL Data Warehouse Project](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main)
-
+Date: March 2025
 ---
 
 ## 🚀 Project Requirements
