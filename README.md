@@ -38,7 +38,7 @@ The following technologies are used in this project:
 - **Postgres**: Database
 - **dbt**: Data transformation
 - **Airflow**: Workflow orchestration
-- **Miro**: Data visualization (to be specified)
+- **Miro**: Data visualization
 
 ---
 
