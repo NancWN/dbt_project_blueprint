@@ -1,15 +1,13 @@
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
+# Name your project! Use only lowercase letters and underscores.
+# This should reflect your org or the project's purpose.
 name: 'dbt_project_blueprint'
 version: '1.0.0'
 
-# This setting configures which "profile" dbt uses for this project.
+# Specifies which dbt profile to use for connection settings.
 profile: 'dbt_project_blueprint'
 
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
+# Paths where dbt will look for various types of files.
+# Typically no need to change these unless using a custom structure.
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -17,26 +15,28 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+# Folders to be deleted when running `dbt clean`.
+clean-targets:
   - "target"
   - "dbt_packages"
 
-
+# Model configurations
 models:
   dbt_project_blueprint:
-    10_bronze_layer:
+    10_bronze_layer:  # Raw or minimally processed data
       materialized: table
       +database: datawarehouse
       +schema: bronze
-    20_silver_layer:
+    20_silver_layer:  # Cleaned and transformed data
       materialized: table
       +database: datawarehouse
       +schema: silver
-    30_gold_layer:
-      materialized: view 
+    30_gold_layer:  # Final, business-ready data
+      materialized: view
       +database: datawarehouse
       +schema: gold
 
+# Configuration for seed data (CSV files)
 seeds:
   +database: datawarehouse
-  +schema: bronze
+  +schema: bronze  # Seed data is loaded into the bronze layer

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: crm_custo_info
+    description: >
+      Customer data from the `custo_info` source,
+      enriched with a technical load timestamp using `run_started_at`.
+    columns:
+      - name: cst_id
+        description: Internal customer ID -> not null and not unique.
+      - name: cst_key
+        description: Unique business key identifying the customer.
+        tests:
+          - not_null
+      - name: cst_firstname
+        description: Customer's first name.
+      - name: cst_lastname
+        description: Customer's last name.
+      - name: cst_marital_status
+        description: Customer's marital status.
+      - name: cst_gndr
+        description: Customer's gender.
+      - name: cst_create_date
+        description: Record creation date for the customer.
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.

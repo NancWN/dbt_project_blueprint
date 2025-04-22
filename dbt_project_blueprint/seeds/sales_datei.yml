@@ -4,6 +4,7 @@ seeds:
   - name: sales_datei
     description: sales info
     config:
+      quote_columns: false
       column_types:
           sls_ord_num: varchar(50)
           sls_prd_key: varchar(50)

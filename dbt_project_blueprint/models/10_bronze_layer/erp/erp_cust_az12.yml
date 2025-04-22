@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: erp_cust_az12
+    description: >
+      Customer data from `cust_az12`,
+      including basic demographic information and a technical load timestamp.
+    columns:
+      - name: cid
+        description: Customer ID.
+        tests:
+          - not_null
+      - name: bdate
+        description: Customer's birth date.
+      - name: gen
+        description: Customer's gender.
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.

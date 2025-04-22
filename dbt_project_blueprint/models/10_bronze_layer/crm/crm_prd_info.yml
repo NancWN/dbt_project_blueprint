@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: crm_prd_info
+    description: >
+      Product data from the `prd_info` source table,
+      enriched with a technical load timestamp using `run_started_at`.
+    columns:
+      - name: prd_id
+        description: Internal product ID.
+        tests:
+          - not_null
+          - unique
+      - name: prd_key
+        description: Unique business key identifying the product.
+        tests:
+          - not_null
+      - name: prd_nm
+        description: Name of the product.
+      - name: prd_cost
+        description: Cost associated with the product.
+      - name: prd_line
+        description: Product line/category.
+      - name: prd_start_dt
+        description: Product start date (valid from).
+      - name: prd_end_dt
+        description: Product end date (valid to).
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.

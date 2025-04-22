@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: erp_loc_a101
+    description: >
+      country  data from `cust_az12` and a technical load timestamp.
+    columns:
+      - name: CID
+        description: Customer ID, contains null values and is not unique.
+      - name: CNTRY
+        description: country.
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.
