@@ -43,7 +43,9 @@ The following technologies are used in this project:
 ---
 
 ## 📂 Repository Structure
-_(....To be added based on file organization...)_
+- dbt_project_blueprint -> contains the whole dbt project
+- scripts -> contains various utility scripts (e.g., for creating the database and schemas)
+
 
 ---
 
@@ -57,6 +59,7 @@ I am a **Data Engineer** with expertise in **SQL, Python, PySpark, and Java**. I
 
 I utilize tools such as **Snowflake, dbt, Microsoft Fabric, Azure Synapse, Airflow, and Databricks**, among others. I specialize in **dimensional modeling and Data Vault modeling**.
 
-Let's stay in touch! Feel free to connect with me on the following platforms:  
-_(....Links to be added...)_
+Let's stay in touch! Feel free to connect with me on the following platform:  
+LinkedIn: www.linkedin.com/in/nancy-nyambura-58338b13a
+
 
