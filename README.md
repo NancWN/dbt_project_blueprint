@@ -1,9 +1,10 @@
 # Data Warehouse and Analytics Project
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project showcases a complete data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics. Date: March 2025.
+This project showcases a complete data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics. _Date: March 2025._
 
 Inspired by: [SQL Data Warehouse Project](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main)
+
 ---
 
 ## 🚀 Project Requirements
@@ -57,5 +58,5 @@ I am a **Data Engineer** with expertise in **SQL, Python, PySpark, and Java**. I
 I utilize tools such as **Snowflake, dbt, Microsoft Fabric, Azure Synapse, Airflow, and Databricks**, among others. I specialize in **dimensional modeling and Data Vault modeling**.
 
 Let's stay in touch! Feel free to connect with me on the following platforms:  
-_(....Links to be added)..._
+_(....Links to be added...)_
 
