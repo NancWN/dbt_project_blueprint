@@ -12,7 +12,7 @@ Date: March 2025
 ### 📌 Building the Data Warehouse (Data Engineering)
 
 #### **Objective**
-Develop a modern data warehouse using **SQL Server** to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using **Postgres** to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### **Specifications**
 - **Data Sources**: Import data from two source systems (**ERP and CRM**) provided as CSV files.
@@ -35,10 +35,10 @@ Develop **SQL-based analytics** to deliver detailed insights into:
 
 ## 🛠️ Technology Stack
 The following technologies are used in this project:
-- **Snowflake**: Database
+- **Postgres**: Database
 - **dbt**: Data transformation
 - **Airflow**: Workflow orchestration
-- **[.....]**: Data visualization (to be specified)
+- **Miro**: Data visualization (to be specified)
 
 ---
 
