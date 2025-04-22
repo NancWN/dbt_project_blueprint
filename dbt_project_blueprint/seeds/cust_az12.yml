@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: cust_az12
+    config:
+      quote_columns: false
+      column_types:
+          CID: varchar(50)
+          BDATE: date
+          GEN: varchar(50)

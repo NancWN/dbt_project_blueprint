@@ -1,0 +1,8 @@
+version: 2
+
+seeds:
+  - name: loc_a101
+    config:
+      column_types:
+          CID: varchar(50)
+          CNTRY: varchar(50)

@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: sales_datei
+    description: sales info
+    config:
+      column_types:
+          sls_ord_num: varchar(50)
+          sls_prd_key: varchar(50)
+          sls_cust_id: int
+          sls_order_dt: int
+          sls_ship_dt: int
+          sls_due_dt: int
+          sls_sales: int
+          sls_quantity: int
+          sls_price: int
