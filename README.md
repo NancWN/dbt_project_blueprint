@@ -1,7 +1,7 @@
-# Data Warehouse and Analytics Project
+# Data Warehouse and Analytics Project (dbt)
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project showcases a complete data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics. _Date: March 2025._
+This project showcases a complete data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics with dbt. _Date: March 2025._
 
 Inspired by: [SQL Data Warehouse Project](https://github.com/DataWithBaraa/sql-data-warehouse-project/tree/main)
 
@@ -44,8 +44,8 @@ The following technologies are used in this project:
 
 ## 📂 Repository Structure
 - dbt_project_blueprint -> contains the whole dbt project
-- scripts -> contains various utility scripts (e.g., for creating the database and schemas)
-- docs -> documentation (e.g. data architecture of the project)
+- scripts -> contains various utility scripts (e.g. for creating the database and schemas)
+- docs -> documentation (e.g. data modell)
 
 
 ---
