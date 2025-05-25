@@ -1,8 +1,9 @@
 version: 2
 
 seeds:
-  - name: px_cat_g1v2
+  - name: px_cat_g1v22
     config:
+      quote_columns: false
       column_types:
           ID: varchar(50)
           CAT: varchar(50)

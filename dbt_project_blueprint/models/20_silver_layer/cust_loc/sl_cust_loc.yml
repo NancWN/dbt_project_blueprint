@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: sl_cust_loc
+    description: >
+        country  data form customer
+    columns:
+      - name: cst_key
+        description: Customer ID
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('sl_cust_info')
+              field: cst_key
+      - name: CNTRY
+        description: country.
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.

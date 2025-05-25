@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: bl_erp_px_cat_g1v2
+    description: >
+      Product category data from `px_cat_g1v2`,
+      enriched with a technical load timestamp.
+    columns:
+      - name: id
+        description: Product category ID, contains null values and is not unique.
+      - name: cat
+        description: category.
+      - name: subcat
+        description: sub-category.
+      - name: maintenance
+        description: maintenance.
+      - name: load_timestamp
+        description: Technical timestamp representing the dbt run execution time.

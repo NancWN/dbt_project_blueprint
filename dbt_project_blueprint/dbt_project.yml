@@ -26,15 +26,30 @@ models:
     10_bronze_layer:  # Raw or minimally processed data
       materialized: table
       +database: datawarehouse
-      +schema: bronze
+      +schema: >
+        {% if target.name == "dev"%}
+          {{ none}}
+        {% else %}
+          bronze
+        {% endif %}
     20_silver_layer:  # Cleaned and transformed data
       materialized: table
       +database: datawarehouse
-      +schema: silver
+      +schema: >
+        {% if target.name == "dev"%}
+          {{ none}}
+        {% else %}
+          silver
+        {% endif %}
     30_gold_layer:  # Final, business-ready data
       materialized: view
       +database: datawarehouse
-      +schema: gold
+      +schema: >
+        {% if target.name == "dev"%}
+          {{ none}}
+        {% else %}
+          gold
+        {% endif %}
 
 # Configuration for seed data (CSV files)
 seeds:

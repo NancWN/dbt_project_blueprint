@@ -1,10 +1,9 @@
 version: 2
 
 models:
-  - name: erp_cust_az12
+  - name: bl_erp_cust_az12
     description: >
-      Customer data from `cust_az12`,
-      including basic demographic information and a technical load timestamp.
+      birthdate from customer
     columns:
       - name: cid
         description: Customer ID.

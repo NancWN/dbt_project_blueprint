@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: sl_ref_prd_info_surrogate_keys
+    description: "Ordnet Primary Keys über eine Sequenz den Surrogatschlüsseln (SK) zu."
+    config:
+      pre-hook:
+        - "CREATE SEQUENCE IF NOT EXISTS {{ target.schema }}.bv_ref_prd_info_sequence_sk"
+    columns:
+      - name: prd_id
+        data_tests:
+          - unique
+          - not_null
+      - name: sk
+        data_tests:
+          - unique
+          - not_null

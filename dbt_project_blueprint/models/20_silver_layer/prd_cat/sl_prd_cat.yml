@@ -1,16 +1,22 @@
 version: 2
 
 models:
-  - name: erp_px_cat_g1v2
+  - name: sl_prd_cat
     description: >
-      Product category data from `px_cat_g1v2`,
-      enriched with a technical load timestamp using `run_started_at`.
+      Product category data 
     columns:
-      - name: id
+      - name: cat_id
         description: Product category ID, contains null values and is not unique.
+        tests:
+          - not_null
+          - unique
+          - dbt_utils.relationships_where:
+              to: ref('sl_prd_info')
+              field: cat_id
+              from_condition: cat_id != 'CO_PD'
       - name: cat
         description: category.
-      - name: subcat
+      - name: sub_cat
         description: sub-category.
       - name: maintenance
         description: maintenance.

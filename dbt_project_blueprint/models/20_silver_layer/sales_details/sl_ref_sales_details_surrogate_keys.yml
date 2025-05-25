@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: sl_ref_sales_details_surrogate_keys
+    description: "Ordnet Primary Keys über eine Sequenz den Surrogatschlüsseln (SK) zu."
+    config:
+      pre-hook:
+        - "CREATE SEQUENCE IF NOT EXISTS {{ target.schema }}.bv_ref_sales_details_sequence_sk"
+    columns:
+      - name: sk
+        data_tests:
+          - unique
+          - not_null
+
+         

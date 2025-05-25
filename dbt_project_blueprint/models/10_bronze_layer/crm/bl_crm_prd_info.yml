@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: crm_prd_info
+  - name: bl_crm_prd_info
     description: >
       Product data from the `prd_info` source table,
-      enriched with a technical load timestamp using `run_started_at`.
+      enriched with a technical load timestamp.
     columns:
       - name: prd_id
         description: Internal product ID.

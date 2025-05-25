@@ -1,10 +1,18 @@
 version: 2
 
 models:
-  - name: crm_sales_datei
+  - name: sl_sales_details
     description: >
       Sales fact data extracted from the `sales_datei` source table,
       enriched with a technical load timestamp based on the dbt run execution time.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - sls_ord_num
+            - sls_prd_key
+            - sls_cust_id
+      - dbt_utils.expression_is_true:
+          expression: "sls_order_dt < sls_ship_dt and sls_order_dt < sls_due_dt"
     columns:
       - name: sls_ord_num
         description: Sales order number.
@@ -16,15 +24,27 @@ models:
         description: Foreign key referencing the customer.
       - name: sls_order_dt
         description: Date when the order was placed.
+        tests:
+          - not_null
       - name: sls_ship_dt
         description: Date when the order was shipped.
+        tests:
+          - not_null
       - name: sls_due_dt
         description: Due date for the order delivery.
+        tests:
+          - not_null
       - name: sls_sales
         description: Total sales amount.
+        tests:
+          - not_null
       - name: sls_quantity
         description: Quantity of items sold.
+        tests:
+          - not_null
       - name: sls_price
         description: Unit price of the product.
+        tests:
+          - not_null
       - name: load_timestamp
         description: Technical timestamp representing the dbt run execution time.

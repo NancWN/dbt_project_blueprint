@@ -1,8 +1,15 @@
 
+{{
+        config(
+        materialized='table',
+        tags=['bronze']
+    )
+}}
+
 with 
 
 source as (
-    select * from {{ ref('sales_datei') }}
+    select * from {{ ref('sales_details') }}
 ),
 
 metadata as (

@@ -1,7 +1,7 @@
 version: 2
 
 seeds:
-  - name: sales_datei
+  - name: sales_details
     description: sales info
     config:
       quote_columns: false
