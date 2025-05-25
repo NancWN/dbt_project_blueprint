@@ -45,7 +45,7 @@ The following technologies are used in this project:
 ## 📂 Repository Structure
 - dbt_project_blueprint -> contains the whole dbt project
 - scripts -> contains various utility scripts (e.g. for creating the database and schemas)
-- docs -> documentation (e.g. data modell)
+- docs -> documentation (e.g. data model)
 
 
 ---
