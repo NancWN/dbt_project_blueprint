@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: gl_dim_products
+    description: >
+      slowly changing dimension (SCD) type 2 for product data
+    columns:
+      - name: product_sk
+        description: Surrogate key for the product.
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        description: Internal product ID.
+        tests:
+          - not_null
+          - unique
+      - name: product_key
+        description: business key identifying the product.
+        tests:
+          - not_null
+          - unique
+      - name: category_id
+        description:  identifying product category.
+        tests:
+          - not_null
+      - name: product_name
+        description: Name of the product.
+      - name: product_desc
+        description: Description of the product.
+      - name: product_cost
+        description: Cost associated with the product.
+      - name: product_line
+        description: Product line/category.
+        tests:
+          - accepted_values:
+              values: ['Road', 'Touring', 'Other Sales', 'Mountain', 'Unknown']
+      - name: product_start_date
+        description: Product start date (valid from).
+      - name: product_end_date
+        description: Product end date (valid to).
+      - name: category
+        description: category.
+      - name: sub_category
+        description: sub-category.
+      - name: maintenance
+        description: maintenance.

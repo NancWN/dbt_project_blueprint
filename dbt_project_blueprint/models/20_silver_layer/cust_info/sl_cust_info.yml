@@ -7,7 +7,7 @@ models:
       enriched with a technical load timestamp using `run_started_at`.
     columns:
       - name: cst_id
-        description: Internal customer ID -> not null and not unique.
+        description: Internal customer ID 
         tests:
           - not_null
           - unique

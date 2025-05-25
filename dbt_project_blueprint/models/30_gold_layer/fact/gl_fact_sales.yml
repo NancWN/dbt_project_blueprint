@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: gl_fact_sales
+    description: >
+      fact sales data 
+    columns:
+      - name: sales_sk
+        description: Surrogate key for the sales record.
+        tests:
+          - not_null
+          - unique
+      - name: sales_order_number
+        description: Sales order number.
+        tests:
+          - not_null
+      - name: sales_product_key
+        description: Foreign key referencing the product.
+      - name: sales_customer_id
+        description: Foreign key referencing the customer.
+      - name: sales_order_date
+        description: Date when the order was placed.
+        tests:
+          - not_null
+      - name: sales_ship_date
+        description: Date when the order was shipped.
+        tests:
+          - not_null
+      - name: sales_due_date
+        description: Due date for the order delivery.
+        tests:
+          - not_null
+      - name: total_sales_amount
+        description: Total sales amount.
+        tests:
+          - not_null
+      - name: sales_quantity
+        description: Quantity of items sold.
+        tests:
+          - not_null
+      - name: sales_price
+        description: Unit price of the product.
+        tests:
+          - not_null
+      - name: customer_fk
+        description: Foreign key referencing the customer.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('gl_dim_customer')
+              field: customer_sk
+      - name: product_fk
+        description: Foreign key referencing the product.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('gl_dim_products_scd2')
+              field: product_sk

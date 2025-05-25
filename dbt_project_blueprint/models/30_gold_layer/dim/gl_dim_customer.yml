@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: gl_dim_customer
+    description: >
+      dimension customer
+    columns:
+      - name: customer_sk
+        description: Surrogate key for the customer.
+        tests:
+          - not_null
+          - unique
+      - name:  customer_id
+        description: Internal customer ID
+        tests:
+          - not_null
+          - unique
+      - name:  customer_key
+        description: Unique business key identifying the customer.
+        tests:
+          - not_null
+      - name:  firstname
+        description: Customer's first name.
+      - name:  lastname
+        description: Customer's last name.
+      - name:  marital_status
+        description: Customer's marital status.
+      - name:  gndr
+        description: Customer's gender.
+      - name:  create_date
+        description: Record creation date for the customer.
+      - name: birthday
+        description: Customer's birth date.
+      - name: CNcountryTRY
+        description: country.

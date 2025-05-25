@@ -28,7 +28,7 @@ models:
       +database: datawarehouse
       +schema: >
         {% if target.name == "dev"%}
-          {{ none}}
+          {{ none }}
         {% else %}
           bronze
         {% endif %}
@@ -37,7 +37,7 @@ models:
       +database: datawarehouse
       +schema: >
         {% if target.name == "dev"%}
-          {{ none}}
+          {{ none }}
         {% else %}
           silver
         {% endif %}
@@ -46,7 +46,7 @@ models:
       +database: datawarehouse
       +schema: >
         {% if target.name == "dev"%}
-          {{ none}}
+          {{ none }}
         {% else %}
           gold
         {% endif %}
