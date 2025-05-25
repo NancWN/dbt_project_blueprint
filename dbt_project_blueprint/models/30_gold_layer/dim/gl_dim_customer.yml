@@ -31,5 +31,5 @@ models:
         description: Record creation date for the customer.
       - name: birthday
         description: Customer's birth date.
-      - name: CNcountryTRY
+      - name: country
         description: country.
